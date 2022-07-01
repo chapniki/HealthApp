@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPaneLogin" prefHeight="862.0" prefWidth="1438.0" style="-fx-background-color: #363740;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cz.vse.fimed.UI.LoginController">
+   <children>
+      <AnchorPane layoutX="457.0" layoutY="58.0" prefHeight="719.0" prefWidth="650.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15px;">
+         <children>
+            <ImageView fitHeight="66.0" fitWidth="91.0" layoutX="278.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/fimed.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="300.0" layoutY="119.0" prefHeight="15.0" prefWidth="63.0" text="FiMed" textFill="#a4a6b3">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="199.0" layoutY="157.0" text="Přihlaste se do FiMed">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="203.0" layoutY="195.0" text="Níže zadejte svůj e-mail a heslo" textFill="#9fa2b2">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="emailLogin" layoutX="11.0" layoutY="280.0" prefHeight="65.0" prefWidth="620.0" promptText="Email">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </TextField>
+            <Label layoutX="17.0" layoutY="250.0" text="EMAIL" textFill="#9fa2b2">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="17.0" layoutY="380.0" text="HESLO" textFill="#9fa2b2">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btn_registration" layoutX="13.0" layoutY="565.0" mnemonicParsing="false" onMouseClicked="#loginUser" prefHeight="50.0" prefWidth="620.0" style="-fx-background-color: #3751FF; -fx-background-radius: 8px;" text="Přihlásit se" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Button>
+            <PasswordField fx:id="passwordLogin" layoutX="13.0" layoutY="410.0" prefHeight="65.0" prefWidth="620.0" promptText="Heslo">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </PasswordField>
+            <Label layoutX="187.0" layoutY="644.0" text="Nemáte účet?" textFill="#9ea1b0">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="319.0" layoutY="644.0" onMouseClicked="#changeStageToRegistration" text="Zaregistrujte se" textFill="#3853ff">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

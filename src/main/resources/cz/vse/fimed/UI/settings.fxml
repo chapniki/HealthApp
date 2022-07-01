@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPaneSettings" prefHeight="862.0" prefWidth="1438.0" style="-fx-background-color: #363740;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cz.vse.fimed.UI.SettingsController">
+   <children>
+      <AnchorPane fx:id="anchorPaneDeleteProfile" layoutX="14.0" layoutY="14.0" prefHeight="856.0" prefWidth="1428.0" style="-fx-background-color: #363740;">
+         <children>
+            <AnchorPane layoutX="500.0" layoutY="220.0" prefHeight="335.0" prefWidth="548.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15px;">
+               <children>
+                  <ImageView fitHeight="66.0" fitWidth="91.0" layoutX="228.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/fimed.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="241.0" layoutY="91.0" prefHeight="15.0" prefWidth="63.0" text="FiMed" textFill="#a4a6b3">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="84.0" layoutY="99.0" prefHeight="135.0" prefWidth="382.0" text="Jste si jistí, že chcete navždy smazat svůj profil?" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btn_dlt_yes" layoutX="43.0" layoutY="242.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: #3751FF; -fx-background-radius: 8px;" text="Ano" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_dlt_no" layoutX="277.0" layoutY="241.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: #3751FF; -fx-background-radius: 8px;" text="Ne" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchorPaneSettings1" layoutX="4.0" layoutY="4.0" prefHeight="864.0" prefWidth="1439.0" style="-fx-background-color: #363740;">
+         <children>
+            <AnchorPane layoutX="500.0" layoutY="20.0" prefHeight="751.0" prefWidth="548.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15px;">
+               <children>
+                  <PasswordField fx:id="passwordField" focusTraversable="false" layoutX="28.0" layoutY="410.0" prefHeight="54.0" prefWidth="490.0" promptText="Heslo">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </PasswordField>
+                  <PasswordField fx:id="passwordConfirmField" focusTraversable="false" layoutX="28.0" layoutY="530.0" prefHeight="54.0" prefWidth="490.0" promptText="Heslo">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </PasswordField>
+                  <Label layoutX="28.0" layoutY="376.0" text="NOVÉ HESLO" textFill="#9fa2b2">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="28.0" layoutY="500.0" text="POTVRĎTE HESLO" textFill="#9fa2b2">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btn_chng_password" layoutX="28.0" layoutY="636.0" mnemonicParsing="false" onMouseClicked="#changePassword" prefHeight="50.0" prefWidth="490.0" style="-fx-background-color: #3751FF; -fx-background-radius: 8px;" text="Změnit heslo" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="66.0" fitWidth="91.0" layoutX="228.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/fimed.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="241.0" layoutY="91.0" prefHeight="15.0" prefWidth="63.0" text="FiMed" textFill="#a4a6b3">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutY="340.0" prefWidth="548.0" />
+                  <Label layoutX="28.0" layoutY="300.0" text="Změnit heslo">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutY="260.0" prefWidth="548.0" />
+                  <Label fx:id="btn_dlt_profile" layoutX="28.0" layoutY="220.0" onMouseClicked="#deleteProfile" text="Smazat profil">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="195.0" layoutY="131.0" text="Nastavení">
+                     <font>
+                        <Font name="System Bold" size="29.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="btn_back" fitHeight="50.0" fitWidth="38.0" layoutX="7.0" layoutY="6.0" onMouseClicked="#goToProfile" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/back.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
